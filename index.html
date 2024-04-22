@@ -1,18 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postula A Trabajos Chiloe</title>
-    <script src="java.js"></script>
+    <title>Formulario de Postulación - Trabajo de Apoyo Ambiental para Chiloé</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-
-    
-
-
-
+    <div id="container">
+        <div id="form-container">
+            <h2>Formulario de Postulación</h2>
+            <form id="application-form">
+                <div class="form-group">
+                    <label for="rut">RUT:</label>
+                    <input type="text" id="rut" name="rut" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido-paterno">Apellido Paterno:</label>
+                    <input type="text" id="apellido-paterno" name="apellido-paterno" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido-materno">Apellido Materno:</label>
+                    <input type="text" id="apellido-materno" name="apellido-materno" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" required>
+                </div>
+                <div class="form-group">
+                    <label for="genero">Género:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="" disabled selected>Seleccione su género</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" name="celular" required>
+                </div>
+                <div class="form-group">
+                    <label for="profesion">Profesión:</label>
+                    <input type="text" id="profesion" name="profesion" required>
+                </div>
+                <div class="form-group">
+                    <label for="carta">Carta de Presentación e Intención:</label>
+                    <textarea id="carta" rows="8" required></textarea>
+                </div>
+                <div class="form-group">
+                    <div id="validationMessages" style="display: none;"></div>
+                    <input type="button" id="submitBtn" value="Enviar">
+                    <input type="button" value="Crear Carta" onclick="generateCarta()">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="java.js"></script>
 </body>
 </html>
